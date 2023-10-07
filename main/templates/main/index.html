@@ -1,10 +1,69 @@
 <!DOCTYPE html>
+{%load static%}
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Title</title>
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/common.css' %}">
 </head>
 <body>
-	Django 첫 페이지!
+	<div id="container">
+		<header id="header">
+		  <div class="titleP">
+			<img class="skkulogo" src="{% static 'images/skku_logo.png' %}" title="Sungkyunkwan University">
+			Library Environment Control System
+		  </div>
+		  <nav id="navigation">
+			<ul>
+			  <li><a href="./">Overview</a></li>
+			</ul>
+		  </nav>
+		</header>
+		<div id="content-top" style="font-family:'Roboto', sans-serif">
+		  <h2><img class="cpuemoji" src="{% static 'images/skku_logo.png' %}" title="CPU">Overview</h2>
+		  <p> 현재 도서관의 현황입니다.</p>
+	
+		</div>
+
+		<div id="content-bottom" style="font-family:'Roboto', sans-serif;">
+		  <h2>Temperature</h2>
+		  <p>도서관 온도를 제시합니다.</p>
+
+		  <iframe width="300" height="120" src="https://www.youtube.com/embed/THhrq58cxgI" title="SKKU" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	
+		</div>
+
+		<div id="content-bottom" style="font-family:'Roboto', sans-serif;">
+		  <h2>Humadity</h2>
+		  <p>도서관 습도를 제시합니다.</p>
+
+		  <iframe width="300" height="120" src="https://www.youtube.com/embed/THhrq58cxgI" title="SKKU" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	
+		</div>
+
+		<div id="content-bottom" style="font-family:'Roboto', sans-serif;">
+		  <h2>Existence</h2>
+		  <p>이용자 착석여부 확인</p>
+
+		  <iframe width="300" height="120" src="https://www.youtube.com/embed/THhrq58cxgI" title="SKKU" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+	
+		</div>
+	
+		<footer>
+		  <div id="author">
+			<p> Grduation Project (2022-Fall to 2023-Fall) <br> Performed by Kim Junsik 2016314232</p>
+		  </div>
+		</footer>
+	
+	  </div>
 </body>
 </html>

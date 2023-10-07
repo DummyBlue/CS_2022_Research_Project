@@ -1,0 +1,93 @@
+#header {
+    border: 1px solid #bcbcbc;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.titleP {
+    display: none;
+}
+
+#navigation {
+    height: 50px;
+    margin: auto;
+    background-color: #53a1c5;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#navigation ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation li {
+    list-style: none;
+    border-right: 1px solid #bcbcbc;
+    float: left;
+    height: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+#navigation li a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#navigation li:hover {
+    background-color: blue;
+}
+
+@media only screen and (min-width: 600px) {
+    /* Tablet PC */
+
+    .skkulogo {
+        width: 20px;
+        height: 20px;
+        margin: 5px;
+    }
+
+    .titleP {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Noto Sans', sans-serif;
+        color: blue;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* Desktop */
+
+    .skkulogo {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    .titleP {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Noto Sans', sans-serif;
+        color: blue;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+}
