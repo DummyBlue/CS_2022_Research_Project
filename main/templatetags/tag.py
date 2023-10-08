@@ -1,5 +1,4 @@
-from django.shortcuts import render
-import os
+#!usr/bin/python3
 
 from django import template
 import time
@@ -10,6 +9,9 @@ import signal
 from pytz import timezone
 from datetime import datetime
 
+register = template.Library()
+
+@register.simple_tag
 def get_cur_time():
 
     KST = timezone('Asia/Seoul')
@@ -19,6 +21,7 @@ def get_cur_time():
     
     return nowtime
 
+@register.simple_tag
 def get_cur_hum():
 
     sensor = Adafruit_DHT.DHT11
@@ -33,6 +36,7 @@ def get_cur_hum():
 
     return nowhum
 
+@register.simple_tag
 def get_cur_temp():
 
     sensor = Adafruit_DHT.DHT11
@@ -47,6 +51,8 @@ def get_cur_temp():
         
     return nowtemp
 
+
+@register.simple_tag
 def get_cur_dis():
     
     #GPIO 핀
@@ -129,36 +135,3 @@ def get_cur_dis():
 
     GPIO.cleanup()
     return sit_tf
-
-def make_history():
-    c_time = get_cur_time()
-    c_hum = get_cur_hum()
-    c_temp = get_cur_temp()
-    c_dis = get_cur_dis()
-
-    c_output = f"{c_time};{c_hum}%;{c_temp}°C;{c_dis}\n"
-
-    file = open("./history.txt", "a", encoding="utf-8")
-    file.write(c_output)
-    file.close
-
-    print(c_output)
-
-# Create your views here.
-def index(request):
-    os.system('sudo uhubctl -l 1-1 -p 2 -a off')
-    os.system('sudo uhubctl -l 1-1 -p 3 -a off')
-    make_history()
-    return render(request, 'main/index.html')
-
-def toggleled(request):
-    os.system('sudo uhubctl -l 1-1 -p 2 -a toggle')
-    return render(request, 'main/index.html')
-
-def togglehum(request):
-    os.system('sudo uhubctl -l 1-1 -p 3 -a toggle')
-    return render(request, 'main/index.html')
-
-def save(request):
-    make_history()    
-    return render(request, 'main/index.html')

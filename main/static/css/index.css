@@ -1,4 +1,4 @@
-#content-top {
+#content-upper-left {
 	border: 1px solid #bcbcbc;
 	position: relative;
 	max-width: 95%;
@@ -8,13 +8,25 @@
 	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
-  }
+}
+
+#content-upper-right {
+	border: 1px solid #bcbcbc;
+	position: relative;
+	max-width: 95%;
+	width: 95%;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}  
   
-  #content-top ul {
+#content-top ul {
 	list-style: none;
-  }
+}
   
-  #content-bottom {
+#content-bottom-left {
 	border: 1px solid #bcbcbc;
 	position: relative;
 	max-width: 95%;
@@ -24,8 +36,28 @@
 	margin-right: auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
-  }
+}
+
+#content-bottom-right {
+	border: 1px solid #bcbcbc;
+	position: relative;
+	max-width: 95%;
+	width: 95%;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.thead{
+	text-align: center;
+}
+
+.thead{
+	text-align: center;
+}
   
-  .cpuemoji {
+.cpuemoji {
 	width: 50px;
-  }
+}
