@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import os
 
 from django import template
+from django.http import FileResponse
 import time
 import Adafruit_DHT
 import RPi.GPIO as GPIO
@@ -9,6 +10,13 @@ import sys
 import signal
 from pytz import timezone
 from datetime import datetime
+
+from django.core.files.storage import FileSystemStorage
+from django.conf import settings
+import os, random
+
+
+error_message = "ERROR"
 
 def get_cur_time():
 
@@ -29,7 +37,7 @@ def get_cur_hum():
     if hum is not None and tem is not None:
         nowhum = "{0:0.1f}".format(hum)
     else:
-        nowhum = "Failed to get Humidity Data."
+        nowhum = error_message
 
     return nowhum
 
@@ -43,7 +51,7 @@ def get_cur_temp():
     if hum is not None and tem is not None:
         nowtemp = "{0:0.1f}".format(tem)
     else:
-        nowtemp = "Failed to get Temperature Data."
+        nowtemp = error_message
         
     return nowtemp
 
@@ -54,7 +62,7 @@ def get_cur_dis():
     ECHO = 26
 
     MAX_DISTANCE_CM = 300
-    MAX_DURATION_TIMEOUT = (MAX_DISTANCE_CM * 2 * 29.1) #17460 # 17460us = 300cm
+    MAX_DURATION_TIMEOUT = (MAX_DISTANCE_CM * 2 * 29.1)
 
     distance = 0
     sit_tf = ""
@@ -69,54 +77,35 @@ def get_cur_dis():
     time.sleep(0.1)
 
     while True:
-        #171206 중간에 통신 안되는 문제 개선용      
         fail = False
         time.sleep(0.1)
-        # 트리거를 10us 동안 High 했다가 Low로 함.
-        # sleep 0.00001 = 10us
         GPIO.output(TRIG, True)
         time.sleep(0.00001)
         GPIO.output(TRIG, False)
 
-        # ECHO로 신호가 들어 올때까지 대기
         timeout = time.time()
         while GPIO.input(ECHO) == 0:
-            #들어왔으면 시작 시간을 변수에 저장
             pulse_start = time.time()
             if ((pulse_start - timeout)*1000000) >= MAX_DURATION_TIMEOUT:
-                #171206 중간에 통신 안되는 문제 개선용        
-                #continue
                 fail = True
                 break
-            
-        #171206 중간에 통신 안되는 문제 개선용        
+                  
         if fail:
             continue
         
-        #ECHO로 인식 종료 시점까지 대기
         timeout = time.time()
         while GPIO.input(ECHO) == 1:
-            #종료 시간 변수에 저장
             pulse_end = time.time()
             if ((pulse_end - pulse_start)*1000000) >= MAX_DURATION_TIMEOUT:
                 distance = 0
-                #171206 중간에 통신 안되는 문제 개선용        
-                #continue
                 fail = True
                 break
-
-        #171206 중간에 통신 안되는 문제 개선용        
+  
         if fail:
             continue
 
-        #인식 시작부터 종료까지의 차가 바로 거리 인식 시간
         pulse_duration = (pulse_end - pulse_start) * 1000000
-
-        # 시간을 cm로 환산
         distance = (pulse_duration/2)/29.1
-        #print(pulse_duration)
-        #print('')
-        # 자리수 반올림
         distance = round(distance, 2)
 
         #표시
@@ -138,11 +127,11 @@ def make_history():
 
     c_output = f"{c_time};{c_hum}%;{c_temp}°C;{c_dis}\n"
 
-    file = open("./history.txt", "a", encoding="utf-8")
+    file = open("./main/media/result/history.txt", "a", encoding="utf-8")
     file.write(c_output)
     file.close
 
-    print(c_output)
+    print(c_output)  
 
 # Create your views here.
 def index(request):
@@ -156,9 +145,16 @@ def toggleled(request):
     return render(request, 'main/index.html')
 
 def togglehum(request):
-    os.system('sudo uhubctl -l 1-1 -p 3 -a toggle')
+    os.system('sudo uhubctl -l 2 -p 2 -a toggle')
     return render(request, 'main/index.html')
 
 def save(request):
-    make_history()    
-    return render(request, 'main/index.html')
+    make_history()  
+    file_path = os.path.abspath("./main/media/result/")
+    file_name = os.path.basename("./main/media/result/history.txt")
+    fs = FileSystemStorage(file_path)
+    response = FileResponse(fs.open(file_name, 'rb'),
+                            content_type='application/vnd.ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="history.txt"'
+
+    return response

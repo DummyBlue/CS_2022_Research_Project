@@ -8,6 +8,21 @@ import sys
 import signal
 from pytz import timezone
 from datetime import datetime
+import os
+
+error_message = "ERROR"
+
+minTemp = 0
+maxTemp = 30
+
+minHum = 0
+maxHum = 100
+
+globalTemp = 0.0
+globalHum = 0.0
+globalSit = False
+globalLED = False
+globalHum = False
 
 register = template.Library()
 
@@ -23,6 +38,7 @@ def get_cur_time():
 
 @register.simple_tag
 def get_cur_hum():
+    global globalHum
 
     sensor = Adafruit_DHT.DHT11
     pin = 21
@@ -32,12 +48,14 @@ def get_cur_hum():
     if hum is not None and tem is not None:
         nowhum = "{0:0.1f}".format(hum)
     else:
-        nowhum = "Failed to get Humidity Data."
+        nowhum = error_message
 
+    globalHum = nowhum
     return nowhum
 
 @register.simple_tag
 def get_cur_temp():
+    global globalTemp
 
     sensor = Adafruit_DHT.DHT11
     pin = 21
@@ -47,13 +65,52 @@ def get_cur_temp():
     if hum is not None and tem is not None:
         nowtemp = "{0:0.1f}".format(tem)
     else:
-        nowtemp = "Failed to get Temperature Data."
-        
+        nowtemp = error_message
+
+    globalTemp = nowtemp
     return nowtemp
 
+@register.simple_tag
+def eval_hum():
+    eval_prn = ""
+    tmp_float = 0.0
+
+    if globalHum == error_message:
+        return error_message
+    else:
+        tmp_float = float(globalHum)
+
+    if tmp_float < minHum:
+        eval_prn = "가습기 작동이 필요합니다."
+    elif tmp_float > maxHum:
+        eval_prn = "제습기 작동이 필요합니다."
+    else:
+        eval_prn = "습도 상태가 정상입니다."
+
+    return eval_prn
+
+@register.simple_tag
+def eval_temp():
+    eval_prn = ""
+    tmp_float = 0.0
+
+    if globalTemp == error_message:
+        return error_message
+    else:
+        tmp_float = float(globalTemp)
+
+    if tmp_float < minTemp:
+        eval_prn = "난방기 작동이 필요합니다."
+    elif tmp_float > maxTemp:
+        eval_prn = "냉방기 작동이 필요합니다."
+    else:
+        eval_prn = "온도 상태가 정상입니다."
+
+    return eval_prn
 
 @register.simple_tag
 def get_cur_dis():
+    global globalSit
     
     #GPIO 핀
     TRIG = 20
@@ -74,64 +131,87 @@ def get_cur_dis():
     GPIO.output(TRIG, False)
     time.sleep(0.1)
 
-    while True:
-        #171206 중간에 통신 안되는 문제 개선용      
+    while True:   
         fail = False
         time.sleep(0.1)
-        # 트리거를 10us 동안 High 했다가 Low로 함.
-        # sleep 0.00001 = 10us
         GPIO.output(TRIG, True)
         time.sleep(0.00001)
         GPIO.output(TRIG, False)
 
-        # ECHO로 신호가 들어 올때까지 대기
         timeout = time.time()
         while GPIO.input(ECHO) == 0:
-            #들어왔으면 시작 시간을 변수에 저장
             pulse_start = time.time()
             if ((pulse_start - timeout)*1000000) >= MAX_DURATION_TIMEOUT:
-                #171206 중간에 통신 안되는 문제 개선용        
-                #continue
                 fail = True
                 break
-            
-        #171206 중간에 통신 안되는 문제 개선용        
+              
         if fail:
             continue
         
-        #ECHO로 인식 종료 시점까지 대기
         timeout = time.time()
         while GPIO.input(ECHO) == 1:
-            #종료 시간 변수에 저장
             pulse_end = time.time()
             if ((pulse_end - pulse_start)*1000000) >= MAX_DURATION_TIMEOUT:
                 distance = 0
-                #171206 중간에 통신 안되는 문제 개선용        
-                #continue
                 fail = True
                 break
-
-        #171206 중간에 통신 안되는 문제 개선용        
+      
         if fail:
             continue
 
-        #인식 시작부터 종료까지의 차가 바로 거리 인식 시간
         pulse_duration = (pulse_end - pulse_start) * 1000000
 
-        # 시간을 cm로 환산
         distance = (pulse_duration/2)/29.1
-        #print(pulse_duration)
-        #print('')
-        # 자리수 반올림
         distance = round(distance, 2)
 
-        #표시
         if distance < 5:
             sit_tf = "착석"
+            globalSit = True
             break
         else:
             sit_tf = "부재"
+            globalSit = False
             break
 
     GPIO.cleanup()
     return sit_tf
+
+@register.simple_tag
+def get_cur_led():
+    global globalLED
+    led_rst = os.popen("sudo uhubctl | grep 'Port 2' | grep '0000' | awk '{print $4}'").read()
+
+    if led_rst.strip() == "off":
+        led_prn = "OFF"
+        globalLED = False
+    else:
+        led_prn = "ON"
+        globalLED = True
+
+    return led_prn
+
+@register.simple_tag
+def get_cur_hum2():
+    global globalHum
+    led_rst = os.popen("sudo uhubctl | grep 'Port 2' | grep '0000' | awk '{print $4}'").read()
+
+    if led_rst.strip() == "off":
+        led_prn = "OFF"
+        globalHum = False
+    else:
+        led_prn = "ON"
+        globalHum = True
+
+    return led_prn
+
+@register.simple_tag
+def eval_sit():
+    eval_prn = ""
+    if (globalSit):
+        eval_prn = "현재 좌석을 사용중입니다."
+    else:
+        eval_prn = "현재 좌석을 사용중이지 않습니다."
+        if(globalLED): eval_prn += "\nLED 조명을 끄셔도 됩니다."
+        if(globalHum): eval_prn += "\n가습기를 끄셔도 됩니다."
+
+    return eval_prn
