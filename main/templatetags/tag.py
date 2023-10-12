@@ -22,7 +22,7 @@ globalTemp = 0.0
 globalHum = 0.0
 globalSit = False
 globalLED = False
-globalHum = False
+globalHumTF = False
 
 register = template.Library()
 
@@ -192,15 +192,15 @@ def get_cur_led():
 
 @register.simple_tag
 def get_cur_hum2():
-    global globalHum
+    global globalHumTF
     led_rst = os.popen("sudo uhubctl | grep 'Port 2' | grep '0000' | awk '{print $4}'").read()
 
     if led_rst.strip() == "off":
         led_prn = "OFF"
-        globalHum = False
+        globalHumTF = False
     else:
         led_prn = "ON"
-        globalHum = True
+        globalHumTF = True
 
     return led_prn
 
@@ -212,6 +212,6 @@ def eval_sit():
     else:
         eval_prn = "현재 좌석을 사용중이지 않습니다."
         if(globalLED): eval_prn += "\nLED 조명을 끄셔도 됩니다."
-        if(globalHum): eval_prn += "\n가습기를 끄셔도 됩니다."
+        if(globalHumTF): eval_prn += "\n가습기를 끄셔도 됩니다."
 
     return eval_prn
