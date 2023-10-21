@@ -1,0 +1,489 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 19, 2023 - 13:20:18
+Django version 3.2.19, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 13:20:28] "GET / HTTP/1.1" 200 4730
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 13:20:33] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 13:20:33] "GET /static/css/index.css HTTP/1.1" 304 0
+[19/Oct/2023 13:20:33] "GET /static/css/navbar.css HTTP/1.1" 304 0
+[19/Oct/2023 13:20:33] "GET /static/css/common.css HTTP/1.1" 304 0
+[19/Oct/2023 13:20:33] "GET /static/images/skku_logo.png HTTP/1.1" 304 0
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 13:21:30] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 13:30:11] code 400, message Bad request version ('\x02h2\x08http/1.1\x00\x00\x00\x1b\x00\x19\x00\x00\x16node.bluefactor97.shop\x00')
+[19/Oct/2023 13:30:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Oct/2023 13:30:11] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01ÌJJ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x00\x00\x1b\x00\x19\x00\x00\x16node.bluefactor97.shopDi\x00\x05\x00\x03\x02h2\x00\x17\x00\x00\x00')
+[19/Oct/2023 13:30:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 13:30:12] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 13:30:12] "GET /static/css/index.css HTTP/1.1" 200 71
+[19/Oct/2023 13:30:12] "GET /static/css/navbar.css HTTP/1.1" 200 1719
+[19/Oct/2023 13:30:12] "GET /static/css/common.css HTTP/1.1" 200 487
+[19/Oct/2023 13:30:12] "GET /static/images/skku_logo.png HTTP/1.1" 200 49994
+[19/Oct/2023 13:30:49] code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Ì')
+[19/Oct/2023 13:30:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Oct/2023 13:30:49] code 400, message Bad request version ('»î±Ä¤Y·v\x19\x94Yi¹wYj')
+[19/Oct/2023 13:30:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 13:30:50] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 15:46:05] code 400, message Bad request version ('Y\x10\x9aSì÷')
+[19/Oct/2023 15:46:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 15:46:18] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 15:46:38] "GET /static/images/skku_logo.png HTTP/1.1" 200 49994
+Not Found: /robots.txt
+[19/Oct/2023 15:46:39] "GET /robots.txt HTTP/1.1" 404 2272
+Not Found: /sitemap.xml
+[19/Oct/2023 15:46:41] "GET /sitemap.xml HTTP/1.1" 404 2275
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 17:20:32] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 17:20:32] "GET /static/css/index.css HTTP/1.1" 304 0
+[19/Oct/2023 17:20:32] "GET /static/css/navbar.css HTTP/1.1" 304 0
+[19/Oct/2023 17:20:32] "GET /static/css/common.css HTTP/1.1" 304 0
+[19/Oct/2023 17:20:32] "GET /static/images/skku_logo.png HTTP/1.1" 304 0
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 19:30:23] "GET / HTTP/1.1" 200 4730
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 20:59:08] "HEAD / HTTP/1.0" 200 4730
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 21:34:54] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 21:34:54] "GET /static/css/navbar.css HTTP/1.1" 304 0
+[19/Oct/2023 21:34:54] "GET /static/css/common.css HTTP/1.1" 304 0
+[19/Oct/2023 21:34:54] "GET /static/images/skku_logo.png HTTP/1.1" 304 0
+[19/Oct/2023 21:34:54] "GET /static/css/index.css HTTP/1.1" 304 0
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 21:35:05] "GET / HTTP/1.1" 200 4730
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[19/Oct/2023 22:54:54] "GET / HTTP/1.1" 200 4730
+[19/Oct/2023 22:54:55] "GET /static/css/common.css HTTP/1.1" 200 487
+[19/Oct/2023 22:54:55] "GET /static/css/navbar.css HTTP/1.1" 200 1719
+[19/Oct/2023 22:54:55] "GET /static/css/index.css HTTP/1.1" 200 71
+[19/Oct/2023 22:54:55] "GET /static/images/skku_logo.png HTTP/1.1" 200 49994
+[19/Oct/2023 22:56:29,388] - Broken pipe from ('223.62.21.136', 51992)
+
+[19/Oct/2023 22:56:29,389] - Broken pipe from ('223.62.21.136', 51982)
+
+[19/Oct/2023 22:56:29,389] - Broken pipe from ('223.62.21.136', 51998)
+
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[20/Oct/2023 01:17:34] "GET / HTTP/1.1" 200 4730
+[20/Oct/2023 02:44:52] code 400, message Bad request version ('À\x14À')
+[20/Oct/2023 02:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[20/Oct/2023 02:44:54] "GET / HTTP/1.1" 200 4730
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[20/Oct/2023 03:05:10] "GET / HTTP/1.1" 200 4730
+Not Found: /favicon.ico
+[20/Oct/2023 03:05:20] "GET /favicon.ico HTTP/1.1" 404 2275
+Not Found: /http:/api.ipify.org/
+[20/Oct/2023 03:05:24] "GET http://api.ipify.org/?format=json HTTP/1.1" 404 1818
+Not Found: /www.shadowserver.org:443
+[20/Oct/2023 03:05:27] "CONNECT www.shadowserver.org:443 HTTP/1.1" 404 1827
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[20/Oct/2023 03:37:52] "GET / HTTP/1.1" 200 4730
+[20/Oct/2023 03:37:53] "GET /static/css/index.css HTTP/1.1" 304 0
+[20/Oct/2023 03:37:53] "GET /static/css/common.css HTTP/1.1" 304 0
+[20/Oct/2023 03:37:53] "GET /static/css/navbar.css HTTP/1.1" 304 0
+[20/Oct/2023 03:37:53] "GET /static/images/skku_logo.png HTTP/1.1" 304 0
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[20/Oct/2023 03:37:56] "GET / HTTP/1.1" 200 4730
+[20/Oct/2023 04:44:19] code 400, message Bad HTTP/0.9 request type ('Z¥\x01')
+[20/Oct/2023 04:44:19] "Z¥     " 400 -
+[20/Oct/2023 05:33:02] code 400, message Bad request version ('À\x14À')
+[20/Oct/2023 05:33:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 21, 2023 - 10:22:28
+Django version 3.2.19, using settings 'mysite.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[21/Oct/2023 10:22:48] "GET / HTTP/1.1" 200 5553
+[21/Oct/2023 10:22:48] "GET /static/css/index.css HTTP/1.1" 304 0
+[21/Oct/2023 10:22:48] "GET /static/css/navbar.css HTTP/1.1" 304 0
+[21/Oct/2023 10:23:54] "GET /isnull/ HTTP/1.1" 200 6
+[21/Oct/2023 10:24:37] "GET /isnull/ HTTP/1.1" 200 6
+[21/Oct/2023 10:26:09] "GET /isnull/ HTTP/1.1" 200 6
+[21/Oct/2023 10:26:23] "GET /isnull/ HTTP/1.1" 200 6
+Not Found: /aaa9
+[21/Oct/2023 10:28:10] "GET /aaa9 HTTP/1.1" 404 2874
+Not Found: /aab8
+[21/Oct/2023 10:28:11] "GET /aab8 HTTP/1.1" 404 2874
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 2: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 2: 0000 off
+Current status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Sent power off request
+New status for hub 2 [1d6b:0003 Linux 6.1.0-rpi4-rpi-v8 xhci-hcd xHCI Host Controller 0000:01:00.0, USB 3.00, 4 ports, ppps]
+  Port 3: 0080 off
+Current status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+Sent power off request
+New status for hub 1-1 [2109:3431 USB2.0 Hub, USB 2.10, 4 ports, ppps]
+  Port 3: 0000 off
+[21/Oct/2023 10:28:15] "GET / HTTP/1.1" 200 5553

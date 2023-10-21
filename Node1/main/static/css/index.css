@@ -1,0 +1,11 @@
+table, tr, td{
+	border:none;
+   }
+
+#content-top ul {
+	list-style: none;
+}  
+ 
+.cpuemoji {
+	width: 50px;
+}

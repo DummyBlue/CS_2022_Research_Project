@@ -1,0 +1,13 @@
+#content-top ul {
+	list-style: none;
+}
+
+table,
+tr,
+td {
+	border: none;
+}
+
+.cpuemoji {
+	width: 50px;
+}
