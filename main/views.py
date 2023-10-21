@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 import os
 
 from django import template
-from django.http import FileResponse
+from django.http import FileResponse, HttpResponse
 import time
 import Adafruit_DHT
 import RPi.GPIO as GPIO
@@ -158,3 +158,7 @@ def save(request):
     response['Content-Disposition'] = 'attachment; filename="history.txt"'
 
     return response
+
+def empty(request):
+    tmp = get_cur_dis()
+    return HttpResponse(tmp)

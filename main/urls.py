@@ -10,4 +10,5 @@ path('', views.index, name='index'),
 path('toggleled/', views.toggleled),
 path('togglehum/', views.togglehum),
 path('save/', views.save),
+path('isnull/', views.empty),
 ]

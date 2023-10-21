@@ -1,10 +1,11 @@
 #header {
-    border: 1px solid #bcbcbc;
+    border: 1px solid #2b6653;
     max-width: 100%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
+    background-color: #2b6653;
 }
 
 .titleP {
@@ -14,7 +15,7 @@
 #navigation {
     height: 50px;
     margin: auto;
-    background-color: #53a1c5;
+    background-color: #2b6653;
     font-family: 'Noto Sans', sans-serif;
 }
 
@@ -39,7 +40,7 @@
 }
 
 #navigation li:hover {
-    background-color: blue;
+    background-color: #8dc63f;
 }
 
 @media only screen and (min-width: 600px) {
@@ -61,7 +62,8 @@
         align-items: center;
         justify-content: center;
         font-family: 'Noto Sans', sans-serif;
-        color: blue;
+        background-color: #2b6653;
+        color: #ffffff;
         font-weight: bold;
         font-size: 1rem;
     }
@@ -86,7 +88,8 @@
         align-items: center;
         justify-content: center;
         font-family: 'Noto Sans', sans-serif;
-        color: blue;
+        background-color: #2b6653;
+        color: #ffffff;
         font-weight: bold;
         font-size: 1.6rem;
     }
